@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+</head>
+
+<style>
+    .about-section {
+    padding: 100px 0;
+    background: #ffffff;
+    overflow: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Section Header */
+.section-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.subtitle {
+    display: inline-block;
+    font-size: 1rem;
+    color: #007bff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.subtitle::before,
+.subtitle::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 30px;
+    height: 1px;
+    background: #007bff;
+}
+
+.subtitle::before {
+    right: -40px;
+}
+
+.subtitle::after {
+    left: -40px;
+}
+
+.title {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+/* Main Content */
+.content-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.lead-text {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #666;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+/* Feature Grid */
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.feature-item {
+    text-align: center;
+    padding: 2rem;
+    background: #f8f9fa;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.feature-item:hover {
+    transform: translateY(-10px);
+}
+
+.feature-item .icon {
+    width: 70px;
+    height: 70px;
+    background: #007bff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+}
+
+.feature-item .icon i {
+    font-size: 1.8rem;
+    color: white;
+}
+
+.feature-item h3 {
+    font-size: 1.3rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.feature-item p {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Stats Container */
+.stats-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    margin-top: 4rem;
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-number {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #007bff;
+    margin-bottom: 0.5rem;
+}
+
+.stat-label {
+    color: #666;
+    font-size: 1rem;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.section-header,
+.lead-text,
+.feature-item,
+.stat-item {
+    opacity: 0;
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+.lead-text {
+    animation-delay: 0.2s;
+}
+
+.feature-item:nth-child(1) { animation-delay: 0.4s; }
+.feature-item:nth-child(2) { animation-delay: 0.6s; }
+.feature-item:nth-child(3) { animation-delay: 0.8s; }
+
+.stat-item:nth-child(1) { animation-delay: 1s; }
+.stat-item:nth-child(2) { animation-delay: 1.2s; }
+.stat-item:nth-child(3) { animation-delay: 1.4s; }
+.stat-item:nth-child(4) { animation-delay: 1.6s; }
+
+/* Responsive Design */
+@media (max-width: 968px) {
+    .feature-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .stats-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .stats-container {
+        grid-template-columns: 1fr;
+    }
+
+    .title {
+        font-size: 2rem;
+    }
+
+    .lead-text {
+        font-size: 1.1rem;
+    }
+}
+
+</style>
+<body>
+    <section class="about-section">
+        <div class="container">
+            <div class="about-content">
+                <!-- Section Title -->
+                <div class="section-header">
+                    <span class="subtitle">About Us
+                    <h2 class="title">We're More Than Just a Digital Agency</h2>
+                </div>
+    
+                <!-- Main Content -->
+                <div class="content-wrapper">
+                    <p class="lead-text">
+                        Founded in 2010, we've been at the forefront of digital innovation, helping businesses transform their digital presence and achieve extraordinary growth.
+                    </p>
+    
+                    <div class="feature-grid">
+                        <div class="feature-item">
+                            <div class="icon">
+                                <i class="fas fa-rocket"></i>
+                            </div>
+                            <h3>Our Mission</h3>
+                            <p>To empower businesses with innovative digital solutions that drive growth and create lasting impact.</p>
+                        </div>
+    
+                        <div class="feature-item">
+                            <div class="icon">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                            <h3>Our Vision</h3>
+                            <p>To be the global leader in digital transformation, setting new standards for excellence and innovation.</p>
+                        </div>
+    
+                        <div class="feature-item">
+                            <div class="icon">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <h3>Our Values</h3>
+                            <p>Innovation, integrity, and client success are at the heart of everything we do.</p>
+                        </div>
+                    </div>
+    
+                    <div class="stats-container">
+                        <div class="stat-item">
+                            <span class="stat-number" data-count="500">0
+                            <span class="stat-label">Projects Completed
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-count="100">0
+                            <span class="stat-label">Team Members
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-count="50">0
+                            <span class="stat-label">Countries Served
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-count="12">0
+                            <span class="stat-label">Years Experience
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+    // Animate numbers
+    const stats = document.querySelectorAll('.stat-number');
+    
+    const animateNumber = (element) => {
+        const target = parseInt(element.getAttribute('data-count'));
+        const duration = 2000; // Animation duration in milliseconds
+        const step = target / (duration / 16); // 60fps
+        let current = 0;
+
+        const updateNumber = () => {
+            current += step;
+            if (current < target) {
+                element.textContent = Math.round(current);
+                requestAnimationFrame(updateNumber);
+            } else {
+                element.textContent = target;
+            }
+        };
+
+        updateNumber();
+    };
+
+    // Intersection Observer for stats animation
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                animateNumber(entry.target);
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.5 });
+
+    stats.forEach(stat => observer.observe(stat));
+});
+
+    </script>
+</body>
+</html>
